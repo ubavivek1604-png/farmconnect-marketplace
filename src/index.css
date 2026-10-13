@@ -1,0 +1,263 @@
+@import "tailwindcss";
+
+/* Leaflet Map overrides */
+.leaflet-container {
+  font-family: inherit;
+  z-index: 10;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e7e5e4;
+}
+
+.leaflet-popup-content {
+  margin: 14px 16px;
+  line-height: 1.4;
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+/* Custom hide scrollbars where needed */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Floating Leaves and Nature Elements */
+.leaf {
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.leaf-1 {
+  top: -5%;
+  left: 10%;
+  font-size: 1.25rem;
+  animation: floatDown 18s linear infinite;
+  animation-delay: 0s;
+}
+
+.leaf-2 {
+  top: -5%;
+  left: 25%;
+  font-size: 1.1rem;
+  animation: floatDown 24s linear infinite;
+  animation-delay: 4s;
+}
+
+.leaf-3 {
+  top: -5%;
+  left: 45%;
+  font-size: 1.35rem;
+  animation: floatDown 20s linear infinite;
+  animation-delay: 2s;
+}
+
+.leaf-4 {
+  top: -5%;
+  left: 65%;
+  font-size: 1.15rem;
+  animation: floatDown 26s linear infinite;
+  animation-delay: 8s;
+}
+
+.leaf-5 {
+  top: -5%;
+  left: 80%;
+  font-size: 1.4rem;
+  animation: floatDown 22s linear infinite;
+  animation-delay: 5s;
+}
+
+.leaf-6 {
+  top: -5%;
+  left: 92%;
+  font-size: 1.2rem;
+  animation: floatDown 19s linear infinite;
+  animation-delay: 11s;
+}
+
+.leaf-7 {
+  top: -5%;
+  left: 35%;
+  font-size: 0.9rem;
+  animation: floatDown 16s linear infinite;
+  animation-delay: 9s;
+}
+
+.leaf-8 {
+  top: -5%;
+  left: 55%;
+  font-size: 1.1rem;
+  animation: floatDown 25s linear infinite;
+  animation-delay: 13s;
+}
+
+.leaf-9 {
+  top: -5%;
+  left: 5%;
+  font-size: 1.3rem;
+  animation: floatDown 21s linear infinite;
+  animation-delay: 7s;
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translate3d(0, -20px, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate3d(60px, 50vh, 0) rotate(180deg);
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate3d(-30px, 105vh, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Tractor Chugging Animation */
+@keyframes tractorChug {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(calc(100vw + 120%));
+  }
+}
+
+@keyframes tractorBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes wheelSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes smokePuffAnim {
+  0% {
+    transform: scale(0.4) translate(0, 0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2.2) translate(-25px, -35px);
+    opacity: 0;
+  }
+}
+
+@keyframes windmillBlades {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes birdFlap {
+  0% {
+    transform: translate3d(0, 0, 0) scaleX(1);
+  }
+  50% {
+    transform: translate3d(40px, -15px, 0) scaleX(1);
+  }
+  100% {
+    transform: translate3d(120px, 0, 0) scaleX(1);
+  }
+}
+
+@keyframes grassSway {
+  0%, 100% {
+    transform: skewX(-2deg);
+  }
+  50% {
+    transform: skewX(3deg);
+  }
+}
+
+@keyframes sunRays {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.06);
+  }
+}
+
+.animate-tractor-chug {
+  animation: tractorChug 28s linear infinite;
+}
+
+.animate-tractor-bob {
+  animation: tractorBob 0.6s ease-in-out infinite;
+}
+
+.animate-wheel-spin {
+  animation: wheelSpin 1.2s linear infinite;
+}
+
+.animate-smoke-1 {
+  animation: smokePuffAnim 1.6s ease-out infinite;
+}
+
+.animate-smoke-2 {
+  animation: smokePuffAnim 1.6s ease-out infinite 0.5s;
+}
+
+.animate-smoke-3 {
+  animation: smokePuffAnim 1.6s ease-out infinite 1s;
+}
+
+.animate-windmill {
+  transform-origin: center;
+  animation: windmillBlades 10s linear infinite;
+}
+
+.animate-grass-sway {
+  transform-origin: bottom center;
+  animation: grassSway 4s ease-in-out infinite;
+}
+
+.animate-sun-rays {
+  animation: sunRays 6s ease-in-out infinite;
+}
+
+@keyframes cloudDriftSlow {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 150px));
+  }
+}
+

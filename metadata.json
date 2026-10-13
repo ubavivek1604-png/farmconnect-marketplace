@@ -1,0 +1,10 @@
+{
+  "name": "Remix FarmConnect — Local Farmer-to-Customer Marketplace",
+  "description": "Direct farm-to-consumer agricultural marketplace connecting local farmers with consumers for fresh produce, fair pricing, and transparent local sourcing.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
